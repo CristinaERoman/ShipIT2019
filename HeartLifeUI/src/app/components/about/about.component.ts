@@ -16,4 +16,10 @@ export class AboutComponent implements OnInit {
     this.isLogInModalActive = !this.isLogInModalActive;
   }
   title = "HeartLifeUI";
+
+sendMail(){
+  var mail = 'mailto:bogdan.ariton@cerner.com?subject=OhhhhMyHeart'+
+               '&body=Please Bogdan fix my heart application!';
+  window.open(mail);
+}
 }

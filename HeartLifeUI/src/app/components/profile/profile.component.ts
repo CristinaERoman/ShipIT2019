@@ -12,16 +12,17 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {}
   public result: string = "48-1-0-124-274-0-0-166-0-0-1-0-3";
   getDisease() {
+    this.resetValues();
     document.getElementById("userProfile").style.display = "none";
     document.getElementById("diagnValue").style.display = "block";
     let resp = this.sageMakerService.getResult(this.result);
     if (resp === "False") {
       document.getElementById("diagnValue").textContent = "You are not suffering from a hearth disease!";
-      document.getElementById("diagnValue").className = "textDiaAfter";
+      document.getElementById("diagnValue").className = "textDiaAfterH";
     } else {
       document.getElementById("diagnValue").textContent =
         "Your might be suffering from a heart disease! Please consult a doctor";
-      document.getElementById("diagnValue").className = "textDiaAfter";
+      document.getElementById("diagnValue").className = "textDiaAfterSick";
     }
   }
 
@@ -31,7 +32,11 @@ export class ProfileComponent implements OnInit {
   }
 
   impHealthy() {
+    document.getElementById("userProfile").style.display = "inline";
+    document.getElementById("diagnValue").style.display = "none";
     this.result = "45-1-3-110-264-0-1-132-0-1_2-1-0-3";
+    document.getElementById("age").setAttribute("value", "45");
+    document.getElementById("sex").setAttribute("value", "M");
     document.getElementById("chest").setAttribute("value", "3");
     document.getElementById("bloodPressure").setAttribute("value", "110");
     document.getElementById("chole").setAttribute("value", "264");
@@ -44,7 +49,11 @@ export class ProfileComponent implements OnInit {
   }
 
   impSick() {
+    document.getElementById("userProfile").style.display = "inline";
+    document.getElementById("diagnValue").style.display = "none";
     this.result = "62-0-0-140-394-0-0-157-0-1_2-1-0-2";
+    document.getElementById("age").setAttribute("value", "62");
+    document.getElementById("sex").setAttribute("value", "F");
     document.getElementById("chest").setAttribute("value", "0");
     document.getElementById("bloodPressure").setAttribute("value", "140");
     document.getElementById("chole").setAttribute("value", "394");
@@ -57,6 +66,8 @@ export class ProfileComponent implements OnInit {
   }
 
   resetValues() {
+    document.getElementById("age").setAttribute("value", "");
+    document.getElementById("sex").setAttribute("value", "");
     document.getElementById("chest").setAttribute("value", "");
     document.getElementById("bloodPressure").setAttribute("value", "");
     document.getElementById("chole").setAttribute("value", "");

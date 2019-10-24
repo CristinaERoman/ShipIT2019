@@ -13,8 +13,8 @@
           <div class="tileCenter"><input class="profileButton" type="submit" value="Connect devices" /></div>
         </article>
       </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-info">
+      <div class="tile is-parent bigSize">
+        <article class="tile is-child notification is-info ">
           <p class="bigTitle">Heart Life</p>
           <p class="subtitle">For the health of your heart</p>
           <figure class="center marginBot"><img src="../assets/images/heartbeat.png" alt="EKG" /></figure>
@@ -23,10 +23,10 @@
             <header class="modal-card-head"><p class="modal-card-title">User Profile</p></header>
             <section class="modal-card-body">
               <div class="field">
-                <p class="control"><input class="input" type="text" placeholder="Age" /></p>
+                <p class="control"><input id="age" class="input" type="text" placeholder="Age" /></p>
               </div>
               <div class="field">
-                <p class="control"><input class="input" type="text" placeholder="Sex" /></p>
+                <p class="control"><input id="sex" class="input" type="text" placeholder="Sex" /></p>
               </div>
             </section>
           </div>
@@ -48,33 +48,60 @@
           <header class="modal-card-head"><p class="modal-card-title">Heart Status</p></header>
           <section class="modal-card-body">
             <div class="field">
-              <p class="control"><input id="chest" class="input" type="text" placeholder="Chest Pain Type" /></p>
-            </div>
-            <div class="field">
               <p class="control">
-                <input id="bloodPressure" class="input" type="text" placeholder="Resting Blood pressure" />
+                <input id="chest" class="input" type="text" placeholder="Chest Pain Type (Range 1-4)" />
               </p>
             </div>
             <div class="field">
-              <p class="control"><input id="chole" class="input" type="text" placeholder="Cholesterol" /></p>
+              <p class="control">
+                <input id="bloodPressure" class="input" type="text" placeholder="Resting Blood pressure (mm/Hg)" />
+              </p>
             </div>
             <div class="field">
-              <p class="control"><input id="blood" class="input" type="text" placeholder="Fasting Blood sugar" /></p>
+              <p class="control"><input id="chole" class="input" type="text" placeholder="Cholesterol (mg/dl)" /></p>
             </div>
             <div class="field">
-              <p class="control"><input id="ekgres" class="input" type="text" placeholder="Resting EKG Result" /></p>
+              <p class="control">
+                <input
+                  id="blood"
+                  class="input"
+                  type="text"
+                  placeholder="Fasting Blood sugar (1 if > 120 0 otherwise)"
+                />
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <input
+                  id="ekgres"
+                  class="input"
+                  type="text"
+                  placeholder="Resting EKG Result (0 - 1 (abnormal) - 2 (hipertrophy))"
+                />
+              </p>
             </div>
             <div class="field">
               <p class="control"><input id="maxpulse" class="input" type="text" placeholder="Max Pulse Value" /></p>
             </div>
             <div class="field">
-              <p class="control"><input id="angina" class="input" type="text" placeholder="Exercise Angina" /></p>
+              <p class="control">
+                <input id="angina" class="input" type="text" placeholder="Exercise Angina (1 - Yes 0 - No)" />
+              </p>
             </div>
             <div class="field">
-              <p class="control"><input id="stSeg" class="input" type="text" placeholder="ST segment Depression" /></p>
+              <p class="control">
+                <input id="stSeg" class="input" type="text" placeholder="ST segment Depression (1 - Yes 0 - No)" />
+              </p>
             </div>
             <div class="field">
-              <p class="control"><input id="depres" class="input" type="text" placeholder="Depression" /></p>
+              <p class="control">
+                <input
+                  id="depres"
+                  class="input"
+                  type="text"
+                  placeholder="Depression (1 - Elevated 2 - Normal 3 - Decreased)"
+                />
+              </p>
             </div>
           </section>
           <input class="loginButton" type="submit" value="Save" (click)="resetValues()" />

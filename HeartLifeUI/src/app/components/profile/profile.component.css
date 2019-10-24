@@ -14,14 +14,39 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.textDiaAfter {
+.textDiaAfterSick {
   font-size: 40px;
   color: red;
   border: black;
   border-style: solid;
 }
 
-.textDiaBefore {
+.textDiaAfterH {
+  font-size: 40px;
+  color: white;
+  border: black;
+  border-style: solid;
+}
+
+.textDiaBeforeSick {
   font-size: 40px;
   color: red;
 }
+
+.textDiaBeforeH {
+  font-size: 40px;
+  color: white;
+}
+
+.bigSize {
+  height: 570px;
+}
+
+.label {
+  color: white;
+  padding: 8px;
+}
+
+.success {
+  background-color: #4caf50;
+} /* Green */

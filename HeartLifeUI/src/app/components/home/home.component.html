@@ -45,7 +45,7 @@
         <div class="tile paddingLeft">
           <input class="loginButton" type="submit" (click)="toggleLogInModal()" value="Login" />
           <input class="loginButton" type="submit" value="About" routerLink="/about" />
-          <input class="loginButton" type="submit" value="Contact Us" />
+          <input class="loginButton" type="submit" value="Contact Us" (click)="sendMail()"/>
         </div>
 
         <figure class="center"><img src="../assets/images/getHelp.png" alt="Get Help" /></figure>
@@ -68,7 +68,7 @@
         <p class="control"><input class="input" type="text" placeholder="E-mail" /></p>
       </div>
       <div class="field">
-        <p class="control"><input class="input" type="text" placeholder="Password" /></p>
+        <p class="control"><input class="input" type="password" placeholder="Password" /></p>
       </div>
     </section>
     <footer class="modal-card-foot">
@@ -100,10 +100,10 @@
         <p class="control"><input class="input" type="text" placeholder="E-mail" /></p>
       </div>
       <div class="field">
-        <p class="control"><input class="input" type="text" placeholder="Password" /></p>
+        <p class="control"><input class="input" type="password" placeholder="Password" /></p>
       </div>
       <div class="field">
-        <p class="control"><input class="input" type="text" placeholder="Confirm Password" /></p>
+        <p class="control"><input class="input" type="password" placeholder="Confirm Password" /></p>
       </div>
     </section>
     <footer class="modal-card-foot">
