@@ -78,3 +78,37 @@
     </footer>
   </div>
 </div>
+
+<div class="modal" [ngClass]="{ 'is-active': isRegisterModalActive }">
+  <div class="modal-background" (click)="toggleRegisterModal()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Register</p>
+      <button class="delete" aria-label="close" (click)="toggleRegisterModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <p class="control"><input class="input" type="text" placeholder="Name" /></p>
+      </div>
+      <div class="field">
+        <p class="control"><input class="input" type="text" placeholder="Phone Number" /></p>
+      </div>
+      <div class="field">
+        <p class="control"><input class="input" type="text" placeholder="Adress" /></p>
+      </div>
+      <div class="field">
+        <p class="control"><input class="input" type="text" placeholder="E-mail" /></p>
+      </div>
+      <div class="field">
+        <p class="control"><input class="input" type="text" placeholder="Password" /></p>
+      </div>
+      <div class="field">
+        <p class="control"><input class="input" type="text" placeholder="Confirm Password" /></p>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-fullwidth">Save</button>
+      <button class="button is-fullwidth" (click)="toggleRegisterModal()">Cancel</button>
+    </footer>
+  </div>
+</div>

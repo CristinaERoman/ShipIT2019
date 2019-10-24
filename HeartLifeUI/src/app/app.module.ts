@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
+import { HttpClientModule } from "@angular/common/http";
 import { AboutComponent } from "./components/about/about.component";
 import { RouterModule, Routes } from "@angular/router";
 import { ContactComponent } from "./components/contact/contact.component";
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }, // <-- debugging purposes only
