@@ -1,0 +1,76 @@
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child">
+          <figure class="center"><img class="bigImage" src="../assets/images/logo.png" alt="Heart Image" /></figure>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <p class="title">We worked on this</p>
+          <p class="subtitle">
+            Popa Naomi <br />
+            Ariton Bogdan <br />
+          </p>
+          <p class="subtitle">
+            Ionut Porancea <br />
+            Cristina Roman <br />
+            Andrei Smoitko
+          </p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="bigTitle">Heart Life</p>
+          <p class="subtitle">For the health of your heart</p>
+          <figure class="center marginBot"><img src="../assets/images/heartbeat.png" alt="EKG" /></figure>
+          <p class="subtitle">Thank you for your attention! This app will save lives.</p>
+          <p class="subtitle">Another story that is important to tell</p>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger alignLeft">
+        <p class="title">A heart disease diagnosis tool that can save your life</p>
+        <p class="subtitle">Are you at risk of developing a heart disease?</p>
+        <div class="content"><!-- Content --></div>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification is-success">
+      <div class="content">
+        <div class="tile paddingLeft">
+          <input class="loginButton" type="submit" (click)="toggleLogInModal()" value="Login" />
+          <input class="loginButton" type="submit" value="Home" routerLink="/home" />
+          <input class="loginButton" type="submit" value="Contact Us" />
+        </div>
+
+        <figure class="center"><img src="../assets/images/getHelp.png" alt="Get Help" /></figure>
+        <div class="content"><!-- Content --></div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<div class="modal" [ngClass]="{ 'is-active': isLogInModalActive }">
+  <div class="modal-background" (click)="toggleLogInModal()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Login</p>
+      <button class="delete" aria-label="close" (click)="toggleLogInModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <p class="control"><input class="input" type="text" placeholder="E-mail" /></p>
+      </div>
+      <div class="field">
+        <p class="control"><input class="input" type="text" placeholder="Password" /></p>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-fullwidth" routerLink="/profile">Log In</button>
+      <button class="button is-fullwidth">Register</button> <button class="button is-fullwidth">Recover</button>
+      <button class="button is-fullwidth" (click)="toggleLogInModal()">Cancel</button>
+    </footer>
+  </div>
+</div>
