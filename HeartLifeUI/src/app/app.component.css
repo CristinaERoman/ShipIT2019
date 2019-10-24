@@ -13,7 +13,7 @@
 }
 
 .marginBot {
-  margin-bottom: 11.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .alignLeft {
@@ -21,6 +21,10 @@
 }
 .titleInline {
   display: inline-block;
+}
+
+.paddingLeft {
+  padding-left: 75px;
 }
 
 .loginButton {
